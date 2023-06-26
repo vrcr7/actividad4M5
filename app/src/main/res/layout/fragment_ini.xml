@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="textoNombre"
+            type="java.lang.String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".IniFragment">
+
+        <TextView
+            android:id="@+id/texto"
+            android:layout_width="383dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="108dp"
+            android:text="Bienvenido/a a Logo Trivia. Ingresa tu nombre para comenzar..."
+            android:textAlignment="center"
+            android:textColor="#43029E"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/textoNombre"
+            android:layout_width="253dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="81dp"
+            android:digits="@string/letras"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/texto" />
+
+        <Button
+            android:id="@+id/botonComenzar"
+            android:layout_width="142dp"
+            android:layout_height="143dp"
+            android:layout_marginStart="134dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginBottom="175dp"
+            android:text="Comenzar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoNombre" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

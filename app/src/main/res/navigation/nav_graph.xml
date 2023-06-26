@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/iniFragment">
+
+    <fragment
+        android:id="@+id/iniFragment"
+        android:name="com.example.actividad4m5.IniFragment"
+        android:label="IniFragment" >
+        <action
+            android:id="@+id/action_iniFragment_to_icoFragment"
+            app:destination="@id/icoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/icoFragment"
+        android:name="com.example.actividad4m5.IcoFragment"
+        android:label="IcoFragment" >
+        <action
+            android:id="@+id/action_icoFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="nombre"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.actividad4m5.ResultFragment"
+        android:label="ResultFragment" >
+        <action
+            android:id="@+id/action_resultFragment_to_icoFragment"
+            app:destination="@id/icoFragment" />
+        <argument
+            android:name="resultado"
+            app:argType="boolean" />
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+    </fragment>
+</navigation>
